@@ -1,3 +1,5 @@
+import { Authservice } from './../services/auth.service';
+import { ErrorInterceptorProvider } from './../interceptors/error-interceptor';
 import { CategoriaService } from './../services/domain/categoria.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -25,6 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     CategoriaService,
+    ErrorInterceptorProvider,
+    Authservice,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
